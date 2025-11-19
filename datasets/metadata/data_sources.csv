@@ -1,0 +1,17 @@
+ID,Source Name,Link,Description,License,Include,Data Processing Status
+K1,"Bhagavad Gita verse-wise(English,Hindi,Sanskrit)",https://www.kaggle.com/datasets/yashnarnaware/bhagavad-gita-versewise,"This is a dataset of the bhagavad gita in which all the data is stored verse-wise in English, Hindi and Sanskrit.",CC0: Public Domain,Yes,Yes
+K2,Bhagavad Gita Dataset,https://www.kaggle.com/datasets/a2m2a2n2/bhagwad-gita-dataset,"Data is fetched from a free API, for more details you can visit https://bhagavadgitaapi.in.
+Dataset has 701 rows corresponding to each verse and has 8 columns with Transliteration, Hindi and English meanings of the verse.","Database: Open Database, Contents: Database Contents",Yes,Yes
+K3,Bhagavad Gita Q&A Dataset for Modern Life Problem,https://www.kaggle.com/datasets/rambo011/bhagavad-gita-q-and-a-dataset-for-modern-life-problem/data,A Q&A dataset of Bhagavad Gita wisdom for fine-tuning LLMs.,CC BY-SA 4.0,Yes,Yes
+HF1,Bhagavad-Gita-QA,https://huggingface.co/datasets/JDhruv14/Bhagavad-Gita-QA,Verse-wise QA dataset,Not Found,Yes,Yes
+HF2,Bhagavad-Gita_Dataset,https://huggingface.co/datasets/JDhruv14/Bhagavad-Gita_Dataset,"Gita text + translations/commentaries. This dataset is based on a book called 'Srimad Bhagavad Gita' kept at Central Archaelogical Library, New Delhi",Not Found,Yes,Yes
+HF3,Bhagwat-Gita-Infinity,https://huggingface.co/datasets/XenArcAI/Bhagwat-Gita-Infinity,Expanded LLM dataset,CC BY-SA 4.0,Yes,Yes
+GH1,vedicscriptures/bhagavad-gita,https://github.com/vedicscriptures/bhagavad-gita,Sanskrit+English from GitHub. Same as HF3. Skipped.,GNU General Public License v3.0,No,NA
+GH2,DharmikData,https://github.com/bhavykhatri/DharmicData/tree/main/SrimadBhagvadGita,Multi-scripture repo - Our Focus only 'SrimadBhagvadGita' folder,ODC Open Database License (ODbL),Yes,Yes
+GH3,Gita by bhagavadgita.io,https://github.com/gita/gita,The Bhagavad Gita in JSON,The Unlicense,Yes,Yes
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,, ,,,,
