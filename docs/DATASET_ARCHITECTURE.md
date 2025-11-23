@@ -1,136 +1,129 @@
-# **GitaVerse Dataset Architecture**
+
+# 📂 Dataset Architecture
+
+## GitaVerse-Open-Corpus
+
+This document describes the **internal dataset architecture** used in the GitaVerse-Open-Corpus.
+
+It explains:
+
+- dataset categories
+- file formats
+- canonical schemas
+- processing logic
+- naming conventions
+- relationships between datasets
 
 ---
 
-## **1. Introduction**
+# 🏛️ 1. Dataset Categories
 
-* What is GitaVerse-Open-Corpus
-* Why it exists (AI, RAG, LLM finetuning, structured scriptures, QnA corpora)
-* Design principles:
-  * Transparency
-  * Versioned transformations
-  * Canonical JSONL formats
-  * Multi-lingual readiness
-  * Future-proof merging for Upanishads / Vedas
-
----
-
-## **2. High-Level Architecture Diagram**
-
-Replicate this (ASCII diagram):
+All processed datasets fall into two major groups:
 
 ```
-GitaVerse-Open-Corpus
-│
-├── datasets/
-│   ├── scriptures/
-│   │   ├── K1_processed/       # Cleaned Sanskrit–Hindi–English verses
-│   │   ├── K2_processed/       # Verse-wise structured transliteration & word meanings
-│   │   ├── HF2_HF3_processed/  # Multi-source canonical verse structures
-│   │   └── GH3_processed/      # Commentary + multi-author verse mapping
-│   │
-│   └── qna/
-│       ├── hf1_processed/
-│       │   ├── hf1_qa.jsonl
-│       │   └── hf1_qa_clustered.jsonl
-│       ├── k3_processed/
-│       │   ├── k3_qa.jsonl
-│       │   └── k3_qa_clustered.jsonl
-│       └── master_qna/
-|	    ├── unified_qna.jsonl
-│           └── qa_master.jsonl   
-│
-└── docs/
+1. Scriptures
+2. Question & Answer (QnA)
 ```
 
 ---
 
-## **3. Overview of Each Dataset Category**
+# 📘 2. Scriptures Category
 
-### 📘 **Scripture Datasets**
+These datasets contain:
 
-For each: K1, K2, HF2, HF3/GH1, GH3
+- Sanskrit verse text
+- translations (Hindi / English)
+- transliteration
+- optional commentary
+- metadata
 
-Document:
-
-* Source
-* License
-* Structure
-* Transformations applied
-* Why this dataset matters
-* How it connects to other datasets
-
-Example content:
+## Included Source Sets:
 
 ```
-### K1 — Kaggle: Sanskrit/Hindi/English Verse-Wise
-- CSV format
-- Issues encountered: duplicated verse ranges, inconsistent verse numbering, long commentary blobs inside “meaning” fields.
-- Processing applied:
-  - normalisation
-  - verse_id extraction
-  - expansion of multi-verse entries
-  - removal of duplicated blocks
+K1  (Kaggle – Verse dataset)
+K2  (Kaggle – Verse + transliteration + meaning)
+HF2 (HuggingFace – Sanskrit/Hindi/English aligned)
+HF3/GH1 (Structured JSON with commentaries)
+GH2 (DharmicData Gita subset JSON)
+GH3 (Full commentary dataset)
 ```
-
-Do this for each.
 
 ---
 
-## **4. QnA Datasets**
+# 📗 2.1 Canonical Scriptures Output Format (JSONL)
 
-### 📗 HF1
+Each verse is stored as:
 
-* Verse-aligned
-* 5 Qs per verse
-* High-quality
-* Languages: en + hi
-* Structure before and after processing
-
-### 📗 K3
-
-* Persona-based
-* Modern-life questions
-* 7000+ QnA pairs
-* Must be canonicalized to match HF1
-
----
-
-## **5. Canonical Formats (Critical Section)**
-
-Clearly document:
-
-### **5.1 Canonical Verse Format**
-
-(From K2 + HF2 + GH3)
-
-```json
+```
 {
   "chapter": 1,
   "verse": 1,
   "verse_id": "1:1",
-  "sanskrit": "…",
-  "transliteration": "…",
-  "translation": { "en": "...", "hi": "..." },
-  "word_meanings": { ... },
-  "commentary": {
-      "Swami Sivananda": "…",
-      "Chinmayananda": "…"
-  },
-  "source": "GH3"
+  "sanskrit": "...",
+  "english": "...",
+  "hindi": "...",
+  "transliteration": "...",
+  "commentaries": [
+      {
+        "author": "Swami Ramsukhdas",
+        "language": "hindi",
+        "text": "..."
+      },
+      ...
+  ],
+  "sources": ["K1","K2","HF2","GH3"]
 }
 ```
 
-### **5.2 Canonical QnA Format**
+Notes:
 
-(both HF1 + K3 standardized)
+- fields populated only if present in the source
+- commentaries may be empty
+- verse_id always normalized `"chapter:verse"`
 
-```json
+---
+
+# 💬 3. QnA Category
+
+These datasets contain:
+
+- modern or classical questions
+- answers
+- aligned to verses
+- multiple languages depending on source
+
+## Included Sources:
+
+```
+HF1 – Verse-based Q&A (English/Hindi)
+K3 – Modern Life Problem Q&A with personas
+```
+
+---
+
+# 💡 3.1 Canonical QnA Format
+
+All Q&A datasets are normalized to:
+
+```
 {
   "qid": "HF1-en-1:1-001",
   "source": "HF1",
   "chapter": 1,
-  "verse_id": "1:1",
+  "verse": "1:1",
+  "question": "...",
+  "answer": "..."
+}
+```
+
+For K3:
+
+```
+{
+  "qid": "K3-10.1-024",
+  "source": "K3",
+  "chapter": 10,
+  "verse": "10.1",
   "question": "...",
   "answer": "..."
 }
@@ -138,35 +131,102 @@ Clearly document:
 
 ---
 
-## **6. Clustering Architecture**
+# 🧹 4. Clustered Dataset Outputs
 
-* Semantic clustering is used.
-* Duplicate removal rationale.
-* all-MiniLM-L6-v2 Model used.
-* Cosine threshold used
-* Performance of the clustering
-* Final reductions:
-  * HF1: 7000 → 3596
-  * K3: ~12902 → 7932
+Semantic deduplication produces:
+
+```
+datasets/qna/clustered_qna/
+  hf1_qa_clustered.jsonl
+  k3_qa_clustered.jsonl
+```
+
+Format identical to canonical QnA, but:
+
+- duplicates removed
+- representative question kept
+- unique cluster ids assigned
+
+Example:
+
+```
+{
+  "cluster_id": 1023,
+  "questions": ["Why am I anxious?", "How do I stop worrying?"],
+  "answer": "... representative answer ...",
+  "chapter": 2,
+  "verse": "2:47",
+  "source": ["HF1","K3"]
+}
+```
 
 ---
 
-## **7. Future Merging Layer (NOT DONE NOW)**
+# 🔗 5. Dataset Relationship Overview
 
-Document future steps but mark them “Not executed yet”.
+```
+RAW DATASETS
+   |
+   v
+canonicalization scripts
+   |
+   v
+canonical_* outputs
+   |
+   v
+clustering pipeline
+   |
+   v
+clustered_* outputs
+```
 
 ---
 
-## **8. Versioning Policy**
+# 🏷️ 6. Metadata Files
 
-* All processed data regenerated from scripts
-* Only transformations stored
-* Original datasets not stored (links only)
+```
+datasets/metadata/
+    DataSources.csv
+```
+
+Contains:
+
+- dataset names
+- licenses
+- links
+- provenance
 
 ---
 
-## **9. Credits & Licenses**
+# 🧪 7. Naming Conventions
 
-See this: `GitaVerse-Open-Corpus\datasets\metadata\data_sources.csv`
+```
+source identifiers:
+K1  Kaggle Dataset 1
+K2  Kaggle Dataset 2
+HF1 HuggingFace QnA
+HF2 HuggingFace scripture translation
+HF3 HuggingFace commentary
+GH1 GitHub same as HF3
+GH2 DharmicData
+GH3 Commentary dataset
+K3  Modern Life Q&A
+```
+
+See Also: `datasets\metadata\data_sources.csv`
+
+---
+
+# 🧭 8. Future Unified Datasets
+
+Planned:
+
+```
+verses_master.jsonl
+qa_master.jsonl [Done]
+qna_master_clustered.jsonl
+```
+
+These will integrate ALL processed datasets.
 
 ---
