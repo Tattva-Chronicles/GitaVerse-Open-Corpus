@@ -1,0 +1,483 @@
+[
+  {
+    "author_id": "abhinav-gupta",
+    "display_name": "Sri Abhinav Gupta",
+    "raw_names": [
+      "Sri Abhinav Gupta"
+    ],
+    "sources": [
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "abhinavagupta",
+    "display_name": "Sri Abhinavagupta",
+    "raw_names": [
+      "Sri Abhinavagupta"
+    ],
+    "sources": [
+      "GH2"
+    ],
+    "languages": [
+      "hi"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "abhinavgupta",
+    "display_name": "Sri Abhinavgupta",
+    "raw_names": [
+      "Sri Abhinavgupta"
+    ],
+    "sources": [
+      "GH3"
+    ],
+    "languages": [
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "adidevananda",
+    "display_name": "Swami Adidevananda",
+    "raw_names": [
+      "Swami Adidevananda"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en"
+    ],
+    "roles": [
+      "commentary",
+      "translation"
+    ]
+  },
+  {
+    "author_id": "anandgiri",
+    "display_name": "Sri Anandgiri",
+    "raw_names": [
+      "Sri Anandgiri"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "chinmayananda",
+    "display_name": "Swami Chinmayananda",
+    "raw_names": [
+      "Swami Chinmayananda"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "dhanpati",
+    "display_name": "Sri Dhanpati",
+    "raw_names": [
+      "Sri Dhanpati"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "dr-s-sankaranarayan",
+    "display_name": "Dr. S. Sankaranarayan",
+    "raw_names": [
+      "Dr. S. Sankaranarayan",
+      "Dr.S.Sankaranarayan"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en"
+    ],
+    "roles": [
+      "commentary",
+      "translation"
+    ]
+  },
+  {
+    "author_id": "gambirananda",
+    "display_name": "Swami Gambirananda",
+    "raw_names": [
+      "Swami Gambirananda"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en"
+    ],
+    "roles": [
+      "commentary",
+      "translation"
+    ]
+  },
+  {
+    "author_id": "harikrishnadas-goenka",
+    "display_name": "Sri Harikrishnadas Goenka",
+    "raw_names": [
+      "Sri Harikrishnadas Goenka"
+    ],
+    "sources": [
+      "GH2"
+    ],
+    "languages": [
+      "hi"
+    ],
+    "roles": [
+      "commentary",
+      "translation"
+    ]
+  },
+  {
+    "author_id": "jayatritha",
+    "display_name": "Sri Jayatritha",
+    "raw_names": [
+      "Sri Jayatritha"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "madhavacharya",
+    "display_name": "Sri Madhavacharya",
+    "raw_names": [
+      "Sri Madhavacharya"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "madhusudan-saraswati",
+    "display_name": "Sri Madhusudan Saraswati",
+    "raw_names": [
+      "Sri Madhusudan Saraswati"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "neelkanth",
+    "display_name": "Sri Neelkanth",
+    "raw_names": [
+      "Sri Neelkanth"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "prabhupada",
+    "display_name": "A.C. Bhaktivedanta Swami Prabhupada",
+    "raw_names": [
+      "A.C. Bhaktivedanta Swami Prabhupada"
+    ],
+    "sources": [
+      "HF3"
+    ],
+    "languages": [
+      "en"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "purohit-swami",
+    "display_name": "Shri Purohit Swami",
+    "raw_names": [
+      "Shri Purohit Swami"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en"
+    ],
+    "roles": [
+      "commentary",
+      "translation"
+    ]
+  },
+  {
+    "author_id": "purushottamji",
+    "display_name": "Sri Purushottamji",
+    "raw_names": [
+      "Sri Purushottamji"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "ramanuja",
+    "display_name": "Sri Ramanujacharya",
+    "raw_names": [
+      "Sri Ramanuja",
+      "Sri Ramanujacharya"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "ramsukhdas",
+    "display_name": "Swami Ramsukhdas",
+    "raw_names": [
+      "Swami Ramsukhdas"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "roles": [
+      "commentary",
+      "translation"
+    ]
+  },
+  {
+    "author_id": "shankara",
+    "display_name": "Sri Shankaracharya",
+    "raw_names": [
+      "Sri Shankaracharya"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "sivananda",
+    "display_name": "Swami Sivananda",
+    "raw_names": [
+      "Swami Sivananda"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary",
+      "translation"
+    ]
+  },
+  {
+    "author_id": "sridhara-swami",
+    "display_name": "Sri Sridhara Swami",
+    "raw_names": [
+      "Sri Sridhara Swami"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "tejomayananda",
+    "display_name": "Swami Tejomayananda",
+    "raw_names": [
+      "Swami Tejomayananda"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "roles": [
+      "commentary",
+      "translation"
+    ]
+  },
+  {
+    "author_id": "vallabhacharya",
+    "display_name": "Sri Vallabhacharya",
+    "raw_names": [
+      "Sri Vallabhacharya"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  },
+  {
+    "author_id": "vedantadeshikacharya-venkatanatha",
+    "display_name": "Sri Vedantadeshikacharya Venkatanatha",
+    "raw_names": [
+      "Sri Vedantadeshikacharya Venkatanatha",
+      "Vedantadeshikacharya Venkatanatha"
+    ],
+    "sources": [
+      "GH2",
+      "GH3",
+      "HF3"
+    ],
+    "languages": [
+      "en",
+      "hi",
+      "sa"
+    ],
+    "roles": [
+      "commentary"
+    ]
+  }
+]
