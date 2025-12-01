@@ -1,4 +1,3 @@
-
 # 📂 Dataset Architecture
 
 ## GitaVerse-Open-Corpus
@@ -217,16 +216,30 @@ See Also: `datasets\metadata\data_sources.csv`
 
 ---
 
-# 🧭 8. Future Unified Datasets
-
-Planned:
+# Master Verse Schema (Post-Normalization)
 
 ```
-verses_master.jsonl
-qa_master.jsonl [Done]
-qna_master_clustered.jsonl
+{
+  "scripture": "bhagavad_gita",
+  "chapter": 11,
+  "verse": 16,
+  "verse_id": "11.16",  "sanskrit": "...",
+  "transliteration": "...",  "translations": [
+    {
+      "language": "en",
+      "author": "...",
+      "text": "...",
+      "source": "GH3"
+    }
+  ],  "commentaries": [
+    {
+      "author": "...",
+      "language": "hi",
+      "text": "...",
+      "source": "GH3"
+    }
+  ],  "sources": ["K1", "HF2", "GH2", "GH3"]
+}
 ```
 
-These will integrate ALL processed datasets.
-
----
+All verse ingestion for RAG and LLM training should now use: `datasets/scriptures/master_verses/master_verses.jsonl`

@@ -75,7 +75,7 @@ This repository includes **processed outputs only**, not original datasets.
 
 We provide:
 
-✅ Canonicalized verse datasets
+✅ Canonicalized verse datasets + Unified Master Verse File
 
 ✅ Canonicalized modern Q&A datasets
 
@@ -113,6 +113,24 @@ datasets/metadata/data_sources.csv
 | **GH3**       | GitHub      | Multi-author commentary dataset (extensive)                 |
 
 All these are processed into **canonical JSONL formats** ideal for LLM work.
+
+
+## ✅ Master Canonical Verse File
+
+`datasets/scriptures/master_verses/master_verses.jsonl`
+
+This file is the fully merged, normalized, author-aligned, multi-source canonical verse dataset generated from:
+
+K1, K2, HF2, GH2, GH3
+
+Each verse contains:
+
+- Stable verse_id
+- Sanskrit
+- Transliteration (best-available)
+- All translations (multi-author, multi-language)
+- All commentaries (multi-author)
+- Source provenance
 
 ---
 
@@ -474,4 +492,3 @@ https://github.com/Tattva-Chronicles/GitaVerse-Open-Corpus.
 ![Made With ❤️](https://img.shields.io/badge/Made%20With-Devotion%20%F0%9F%92%96-purple)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![RAG Ready](https://img.shields.io/badge/RAG-ready-yellow)
-
